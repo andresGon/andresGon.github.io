@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+$black: #272727;
+$magenta: #FF1F5B;
+
+html, body{
+    font-size: 14px;
+    font-family: $roboto;
+    margin: 0;
+    padding: 0;
+}
+// ================ main ===============
+
+.main{
+    &-main{
+        // max-width: 1080px;
+        // margin: auto;
+        transition: .3s;
+        &.night{
+            background: $black;
+        }
+    }
+    &-hero{
+        width: 100%;
+        height: calc(100vh - 80px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+// ============== header =============
+
+header{
+    width: 100%;
+    height: 80px;
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    &-controls{
+        display: flex;
+        
+    }
+}
+
+// ============== hero =======================
+.hero{
+    &-top{
+        width: 503px;
+        height: 160px;
+        background: $black;
+        color: #fff;
+        transition: .3s;
+        overflow: hidden;
+        cursor: url(images/cursor.svg), auto;
+        span{
+            display: block;
+            transition: .3s;
+            &:nth-child(1){
+                font-size: 160px;
+                line-height: 150px;
+                letter-spacing: 1.5px;
+                font-weight: 900;
+                transform: translateY(-20%) rotate(4deg);
+            }
+            &:nth-child(2){
+
+            }
+        }
+    }
+    &-down{
+        width: 503px;
+        height: 40px;
+        background: $black;
+        color: #fff;
+        margin-top: 10px;
+        font-size: 23px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &:hover{
+        .hero-top{
+            background: $magenta;
+            color: $black;
+            span{
+                &:nth-child(1){
+                    font-size: 150px;
+                    transform: translateY(0%) rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+// ================= elements =======================
+
+button.day, button.night {
+    width: 20px;
+    height: 20px;
+    background: $magenta;
+    border: none;
+    cursor: pointer;
+}
