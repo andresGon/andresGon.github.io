@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="main main-main night" id="mainDiv">
+    <main class="main main-main" id="mainDiv">
         <header>
             <p>Folio 2021</p>
             <div class="header-controls">
                 <div class="header-col">
-                    <button class="day" id="btnDay"></button>
-                    <button class="night" id="btnNight"></button>
+                    <button class="day" id="btnDay">
+                        <i class="icon-sun"></i>
+                    </button>
+                    <button class="night" id="btnNight">
+                        <i class="icon-moon"></i>
+                    </button>
                 </div>
                 <div class="header-col">
                     <button class="esp">Esp</button>
@@ -22,7 +26,6 @@
                 </div>
             </div>
         </header>
-        
         <main class="main main-hero">
             <div class="hero">
                 <aside></aside>
@@ -35,7 +38,12 @@
                 </h2>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+           <button class="btn-scrollDown">
+                <i class="icon-back"></i>
+               <span>Scroll</span>
+           </button>
+        </footer>
     </main>
 </body>
 <script src="js/index.js"></script>
