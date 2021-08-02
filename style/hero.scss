@@ -1,0 +1,65 @@
+.hero{
+    &-top{
+        width: 503px;
+        height: 170px;
+        background: $black;
+        color: #fff;
+        transition: .3s;
+        overflow: hidden;
+        cursor: url(../images/cursor.svg), auto;
+        margin: 0;
+        span{
+            display: block;
+            transition: .3s;
+            &:nth-child(1){
+                font-size: 160px;
+                line-height: 135px;
+                letter-spacing: 1.5px;
+                font-weight: 900;
+                transform: translate(0, -20%) rotate(4deg);
+            }
+            &:nth-child(2){
+                font-size: 81px;
+                line-height: 38px;
+                text-align: right;
+                transform: translate(2%, -42%) rotate(4deg);
+            }
+        }
+    }
+    &-down{
+        width: 503px;
+        height: 40px;
+        background: $black;
+        color: #fff;
+        margin-top: 10px;
+        font-size: 23px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    }
+    &:hover{
+        .hero-top{
+            background: $magenta;
+            color: $black;
+            span{
+                &:nth-child(1){
+                    font-size: 150px;
+                    line-height: 135px;
+                    transform: translate(1%, 0%) rotate(0deg);
+                }
+                &:nth-child(2){
+                    font-size: 60px;
+                    line-height: 38px;
+                    text-align: right;
+                    transform: translate(-3%, -19%) rotate(0deg);
+                }
+            }
+        }
+        .hero-down{
+            background: $magenta;
+            color: $black;
+        }
+    }
+}

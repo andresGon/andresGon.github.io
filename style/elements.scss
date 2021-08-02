@@ -1,0 +1,41 @@
+button.day, button.night {
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $black;
+    @include night{
+        color: #fff;
+    }
+}
+
+button.esp, button.eng{
+    background: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn{
+    &-scrollDown{
+        background: none;
+        border: none;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        transform: rotate(-90deg);
+        span{
+            font-weight: 900;
+            padding: 0 0 0 7px;
+        }
+        @include night{
+            color: #fff;
+        }
+    }
+}
+.folio{
+    font-weight: 700;
+    margin: 0; 
+}
+
