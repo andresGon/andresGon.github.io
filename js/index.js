@@ -20,32 +20,63 @@ btnNight.addEventListener('click', function(){
 var btnEsp = document.getElementById('esp');
 var btnEng = document.getElementById('eng');
 
-localStorage.setItem('idioma', 'eng')
+
 
 btnEsp.addEventListener('click', function(){
     idiomaCambio('esp');
+    localStorage.setItem('idioma', 'esp');
 });
 
 
 btnEng.addEventListener('click', function(){
     idiomaCambio('eng');
+    localStorage.setItem('idioma', 'eng');
 });
+
+
 
 var idiomaSet = localStorage.getItem('idioma');
 
 function idiomaCambio(valIdioma){
     if(valIdioma === 'esp'){
-        localStorage.setItem('idioma', 'esp');
         console.log('deneria estar en español')
         body.classList.add('esp');
     }
     if(valIdioma === 'eng'){
-        localStorage.setItem('idioma', 'eng');
         console.log('deberia estar en ingles')
         body.classList.remove('esp');
     }
 }
 
+function reLoad(){
+    var idiomaSet2 = localStorage.getItem('idioma');
+    if(idiomaSet2==='esp'){
+        body.classList.add('esp');
+    }else{
+        body.classList.remove('esp');
+    }
+}
+
 idiomaCambio();
+reLoad();
 
 
+// ================= intersection observer =========
+let menuBtn = document.querySelectorAll(".menuMain-row");
+
+observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.intersectionRatio > 0){
+            entry.target.classList.add('menuMain-enter');
+        }else{
+            entry.target.classList.remove('menuMain-enter')
+        }
+    });
+});
+
+menuBtn.forEach(menuBtn =>{
+    observer.observe(menuBtn);
+});
+
+
+observer.observe(element)

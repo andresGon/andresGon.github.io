@@ -7,8 +7,8 @@
     <title>Andrés González | Portfolio | 2021</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
-<body>
-    <main class="main main-main " id="mainDiv">
+<body id="mainDiv">
+    <main class="main main-main " >
         <header>
             <p class="folio">Folio 2021</p>
             <div class="header-controls">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="header-col">
                     <button class="esp" id="esp">Esp</button>
-                    <button class="eng" id="eng">Eng</button>
+                    <button class="eng active" id="eng">Eng</button>
                 </div>
             </div>
         </header>
@@ -41,13 +41,92 @@
                 </h2> 
             </div>
         </main>
-        <footer>
+
+        <div class="wrap-scrollDown">
            <button class="btn-scrollDown">
                 <i class="icon-back"></i>
                <span>Scroll</span>
            </button>
-        </footer>
+        </div>
     </main>
+    <!-- ============== fin de main =================== -->
+
+    <nav class="menuMain">
+
+
+        <button class="menuMain-row menuMain-row--1">
+            <div class="menuMain-col">
+                <span class="menuMain__name txtEng">Works</span>
+                <span class="menuMain__name txtEsp">Projectos</span>
+            </div>
+            <div class="menuMain-col">
+                <p class="menuMain-txt">
+                    <span class="txtEng">en ingles</span>
+                    <span class="txtEsp">en español</span>
+                </p>
+            </div>
+            
+        </button>
+        <button class="menuMain-row">
+            <div class="menuMain-col">
+                <span class="menuMain__name txtEng">Skills</span>
+                <span class="menuMain__name txtEsp">Habiliadades</span>
+            </div>
+            <div class="menuMain-col">
+                <p class="menuMain-txt">
+                    <span class="txtEng">en ingles</span>
+                    <span class="txtEsp">en español</span>
+                </p>
+            </div>
+            
+        </button>
+        <button class="menuMain-row">
+            <div class="menuMain-col">
+                <span class="menuMain__name txtEng">About me</span>
+                <span class="menuMain__name txtEsp">Acerca de mi</span>
+            </div>
+            <div class="menuMain-col">
+                <p class="menuMain-txt">
+                    <span class="txtEng">en ingles</span>
+                    <span class="txtEsp">en español</span>
+                </p>
+            </div>
+            
+        </button>
+        <button class="menuMain-row">
+            <div class="menuMain-col">
+                <span class="menuMain__name txtEng">Talk to me</span>
+                <span class="menuMain__name txtEsp">Hablame</span>
+            </div>
+            <div class="menuMain-col">
+                <p class="menuMain-txt">
+                    <span class="txtEng">en ingles</span>
+                    <span class="txtEsp">en español</span>
+                </p>
+            </div>
+            
+        </button>
+        
+    </nav>
+    <!-- =========== footer ============= -->
+    <footer>
+        <div class="footer-social">
+            <a href="">
+                <i class="icon-linkedin"></i>
+            </a>
+            <a href="">
+                <i class="icon-twitter"></i>
+            </a>
+            <a href="">
+                <i class="icon-whatsapp"></i>
+            </a>
+            <a href="">
+                <i class="icon-mail"></i>
+            </a>
+        </div>
+        <span>Andrés González</span>
+        <span>2021</span>
+    </footer>
 </body>
 <script src="js/index.js"></script>
 </html>

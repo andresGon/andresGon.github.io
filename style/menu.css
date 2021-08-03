@@ -1,0 +1,17 @@
+.menuMain-row {
+  width: 100%;
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menuMain-col {
+  width: 50%;
+}
+
+.menuMain-txt {
+  margin: 0;
+}
+/*# sourceMappingURL=menu.css.map */

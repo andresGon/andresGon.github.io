@@ -12,6 +12,12 @@ html, body{
     margin: 0;
     padding: 0;
 }
+body{
+    transition: .3s ease-in-out;
+}
+body.night{
+    background: $black;
+}
 // ================ mixins ===============
 @mixin night {
     .night & {
@@ -65,10 +71,36 @@ header{
         
     }
 }
-
-// ============== footer =============
+// ============== footer =================
 
 footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 7px;
+    margin-bottom: 21px;
+    a{
+        margin: 0 7px;
+        color: $black;
+        text-decoration: none;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            color: $magenta;
+        }
+    }
+    span{
+        font-weight: 700;
+    }
+}
+.footer{
+
+}
+
+// ============== scroll down =============
+
+.wrap-scrollDown{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,3 +123,4 @@ footer{
 
 @import "./hero.scss";
 @import "./elements.scss";
+@import "./menu.scss";
