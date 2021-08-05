@@ -1,4 +1,5 @@
 .hero{
+    position: relative;
     &-top{
         width: 503px;
         height: 170px;
@@ -60,6 +61,33 @@
         .hero-down{
             background: $magenta;
             color: $black;
+        }
+    }
+    &-aside{
+        width: 16px;
+        height: 80px;
+        // background: blue;
+        position: absolute;
+        top: 0;
+        left: -31px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        a{
+            text-decoration: none;
+            color: $black;
+            font-size: 14px;
+            text-align: center;
+            display: block;
+            margin-bottom: 7px;
+            transition: .3s ease-in-out;
+            &:hover{
+                color: $magenta;
+            }
+            @include night{
+                color: #fff;
+            }
         }
     }
 }

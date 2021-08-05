@@ -3,7 +3,8 @@
 @import "./fonts.scss";
 
 $roboto: 'Roboto', sans-serif;
-$black: #272727;
+// $black: #272727;
+$black: #262e38;
 $magenta: #FF1F5B;
 
 html, body{
@@ -50,6 +51,7 @@ body.night{
         justify-content: center;
         align-items: center;
     } 
+    
 }
 
 
@@ -58,17 +60,31 @@ body.night{
 header{
     width: 100%;
     // height: 80px;
-    max-width: 1080px;
     margin: auto ;
-    padding: 25px 0 0 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    position: fixed;
+    background: #fff;
+    transition: .3s;
+    border:none;
+    @include night{
+        background: $black;
+    }
 }
 
 .header{
     &-controls{
         display: flex;
         
+    }
+    &-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1080px;
+        padding: 21px 0;
     }
 }
 // ============== footer =================
@@ -89,9 +105,16 @@ footer{
         &:hover{
             color: $magenta;
         }
+        @include night{
+            color: #fff;
+        }
     }
     span{
         font-weight: 700;
+        // color: $black;
+    }
+    @include night{
+        color: #fff;
     }
 }
 .footer{

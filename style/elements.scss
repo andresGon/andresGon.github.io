@@ -19,6 +19,9 @@ button.esp, button.eng{
     &.active{
         opacity: 1;
     }
+    @include night{
+        color: #fff;
+    }
 }
 
 .btn{
@@ -41,5 +44,8 @@ button.esp, button.eng{
 .folio{
     font-weight: 700;
     margin: 0; 
+    @include night{
+        color: #fff;
+    }
 }
 

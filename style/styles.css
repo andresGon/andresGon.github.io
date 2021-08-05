@@ -78,7 +78,7 @@ body {
 }
 
 body.night {
-  background: #272727;
+  background: #262e38;
 }
 
 .main-main {
@@ -88,7 +88,7 @@ body.night {
 }
 
 .main-main.night {
-  background: #272727;
+  background: #262e38;
 }
 
 .main-hero {
@@ -107,21 +107,44 @@ body.night {
 
 header {
   width: 100%;
-  max-width: 1080px;
   margin: auto;
-  padding: 25px 0 0 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  background: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: none;
+}
+
+.night header {
+  background: #262e38;
 }
 
 .header-controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1080px;
+  padding: 21px 0;
 }
 
 footer {
@@ -144,7 +167,7 @@ footer {
 
 footer a {
   margin: 0 7px;
-  color: #272727;
+  color: #262e38;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: .3s;
@@ -155,8 +178,16 @@ footer a:hover {
   color: #FF1F5B;
 }
 
+.night footer a {
+  color: #fff;
+}
+
 footer span {
   font-weight: 700;
+}
+
+.night footer {
+  color: #fff;
 }
 
 .wrap-scrollDown {
@@ -189,10 +220,14 @@ footer span {
   display: block;
 }
 
+.hero {
+  position: relative;
+}
+
 .hero-top {
   width: 503px;
   height: 170px;
-  background: #272727;
+  background: #262e38;
   color: #fff;
   -webkit-transition: .3s;
   transition: .3s;
@@ -227,7 +262,7 @@ footer span {
 .hero-down {
   width: 503px;
   height: 40px;
-  background: #272727;
+  background: #262e38;
   color: #fff;
   margin-top: 10px;
   font-size: 23px;
@@ -247,7 +282,7 @@ footer span {
 
 .hero:hover .hero-top {
   background: #FF1F5B;
-  color: #272727;
+  color: #262e38;
 }
 
 .hero:hover .hero-top span:nth-child(1) {
@@ -267,7 +302,45 @@ footer span {
 
 .hero:hover .hero-down {
   background: #FF1F5B;
-  color: #272727;
+  color: #262e38;
+}
+
+.hero-aside {
+  width: 16px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: -31px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.hero-aside a {
+  text-decoration: none;
+  color: #262e38;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin-bottom: 7px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.hero-aside a:hover {
+  color: #FF1F5B;
+}
+
+.night .hero-aside a {
+  color: #fff;
 }
 
 button.day, button.night {
@@ -276,7 +349,7 @@ button.day, button.night {
   background: none;
   border: none;
   cursor: pointer;
-  color: #272727;
+  color: #262e38;
 }
 
 .night button.day, .night button.night {
@@ -293,6 +366,10 @@ button.esp, button.eng {
 
 button.esp.active, button.eng.active {
   opacity: 1;
+}
+
+.night button.esp, .night button.eng {
+  color: #fff;
 }
 
 .btn-scrollDown {
@@ -323,6 +400,10 @@ button.esp.active, button.eng.active {
   margin: 0;
 }
 
+.night .folio {
+  color: #fff;
+}
+
 .menuMain {
   min-height: 100vh;
   display: -webkit-box;
@@ -338,14 +419,16 @@ button.esp.active, button.eng.active {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  gap: 28px;
 }
 
 .menuMain-row {
   width: 100%;
   max-width: 1080px;
   background: none;
-  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,7 +438,8 @@ button.esp.active, button.eng.active {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   opacity: 0;
-  cursor: pointer;
+  cursor: url("../images/cursor.svg"), auto;
+  color: #262e38;
 }
 
 .menuMain-row:hover {
@@ -373,6 +457,10 @@ button.esp.active, button.eng.active {
   opacity: 1;
 }
 
+.night .menuMain-row {
+  border-bottom: 1px solid #fff;
+}
+
 .menuMain-enter {
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
@@ -380,8 +468,6 @@ button.esp.active, button.eng.active {
           animation-name: fadeInLeft;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: .15s;
-          animation-delay: .15s;
 }
 
 @-webkit-keyframes fadeInLeft {
@@ -417,12 +503,11 @@ button.esp.active, button.eng.active {
 
 .menuMain-col:nth-child(1) {
   text-align: left;
-  padding: 0 5%;
-  width: calc(100% - 300px);
+  width: calc(100% - 200px);
 }
 
 .menuMain-col:nth-child(2) {
-  width: 300px;
+  width: 200px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,6 +526,8 @@ button.esp.active, button.eng.active {
 
 .menuMain-txt {
   margin: 0;
+  padding: 0;
+  text-align: right;
 }
 
 .menuMain__name {
@@ -451,5 +538,6 @@ button.esp.active, button.eng.active {
 
 .menuMain-txt {
   opacity: 0;
+  font-weight: 900;
 }
 /*# sourceMappingURL=styles.css.map */
