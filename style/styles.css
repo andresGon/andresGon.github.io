@@ -93,7 +93,7 @@ body.night {
 
 .main-hero {
   width: 100%;
-  height: calc(100vh - 125px);
+  height: calc(100vh - 145px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,6 +103,17 @@ body.night {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main-inner {
+  padding: 62px 0 0 0;
+  height: calc(100vh - 145px);
+}
+
+.main-wInnerCol {
+  margin: auto;
+  width: 90%;
+  max-width: 1080px;
 }
 
 header {
@@ -361,11 +372,6 @@ button.esp, button.eng {
   border: none;
   font-weight: 700;
   cursor: pointer;
-  opacity: .5;
-}
-
-button.esp.active, button.eng.active {
-  opacity: 1;
 }
 
 .night button.esp, .night button.eng {
@@ -398,6 +404,8 @@ button.esp.active, button.eng.active {
 .folio {
   font-weight: 700;
   margin: 0;
+  text-decoration: none;
+  color: #262e38;
 }
 
 .night .folio {
@@ -405,7 +413,7 @@ button.esp.active, button.eng.active {
 }
 
 .menuMain {
-  min-height: 100vh;
+  min-height: calc(100vh - 86px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

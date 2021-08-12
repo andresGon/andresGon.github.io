@@ -46,12 +46,21 @@ body.night{
     }
     &-hero{
         width: 100%;
-        height: calc(100vh - 125px);
+        height: calc(100vh - 145px);
         display: flex;
         justify-content: center;
         align-items: center;
     } 
-    
+    &-inner{
+        // margin-top: 62px;
+        padding: 62px 0 0 0;
+        height: calc(100vh - 145px);
+    }
+    &-wInnerCol{
+        margin: auto;
+        width: 90%;
+        max-width: 1080px;
+    }
 }
 
 

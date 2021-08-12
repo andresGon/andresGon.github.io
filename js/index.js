@@ -17,48 +17,34 @@ btnNight.addEventListener('click', function(){
 
 // =======  local storage ==========
 
-var btnEsp = document.getElementById('esp');
-var btnEng = document.getElementById('eng');
+var btnTrans = document.getElementById('translateBtn');
 
 
-
-btnEsp.addEventListener('click', function(){
-    idiomaCambio('esp');
-    localStorage.setItem('idioma', 'esp');
-});
-
-
-btnEng.addEventListener('click', function(){
-    idiomaCambio('eng');
-    localStorage.setItem('idioma', 'eng');
-});
-
-
-
-var idiomaSet = localStorage.getItem('idioma');
-
-function idiomaCambio(valIdioma){
-    if(valIdioma === 'esp'){
-        console.log('deneria estar en español')
-        body.classList.add('esp');
+function idiomaCambio(){
+    var idiomaSet = localStorage.getItem('idioma');
+    if(localStorage.getItem('idioma') === null){
+        console.log(' idiomaSet esta vacio');
+        localStorage.setItem('idioma', 'eng');
     }
-    if(valIdioma === 'eng'){
-        console.log('deberia estar en ingles')
-        body.classList.remove('esp');
+    if(idiomaSet === 'esp'){
+        body.classList.add('esp');
+        localStorage.setItem('idioma', 'eng');
+        console.log(idiomaSet);
+        btnTrans.innerHTML = "Eng";
+    }
+    if(idiomaSet === 'eng'){
+        body.classList.remove('esp'); 
+        localStorage.setItem('idioma', 'esp');
+        console.log(idiomaSet);
+        btnTrans.innerHTML = "Esp";
     }
 }
 
-function reLoad(){
-    var idiomaSet2 = localStorage.getItem('idioma');
-    if(idiomaSet2==='esp'){
-        body.classList.add('esp');
-    }else{
-        body.classList.remove('esp');
-    }
-}
+btnTrans.addEventListener('click', function(){
+    idiomaCambio();  
+});
 
-idiomaCambio();
-reLoad();
+idiomaCambio();  
 
 
 // ================= intersection observer =========
@@ -79,4 +65,4 @@ menuBtn.forEach(menuBtn =>{
 });
 
 
-observer.observe(element)
+// observer.observe(element) 

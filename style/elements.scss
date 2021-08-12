@@ -15,10 +15,6 @@ button.esp, button.eng{
     border: none;
     font-weight: 700;
     cursor: pointer;
-    opacity: .5;
-    &.active{
-        opacity: 1;
-    }
     @include night{
         color: #fff;
     }
@@ -44,6 +40,8 @@ button.esp, button.eng{
 .folio{
     font-weight: 700;
     margin: 0; 
+    text-decoration: none;
+    color: $black;
     @include night{
         color: #fff;
     }
