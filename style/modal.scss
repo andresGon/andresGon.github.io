@@ -1,0 +1,23 @@
+.modal{
+    &-wrap{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #fff;
+        z-index: 5;
+        display: none;
+        @include night{
+            background: $black;
+        }
+        &.open{
+            display: block;
+        }
+    }
+    &-back{
+        background: none;
+        border: none;
+        font-weight: 700;
+    }
+}

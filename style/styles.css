@@ -70,6 +70,7 @@ html, body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 body {
@@ -243,7 +244,7 @@ footer span {
   -webkit-transition: .3s;
   transition: .3s;
   overflow: hidden;
-  cursor: url(../images/cursor.svg), auto;
+  cursor: default;
   margin: 0;
 }
 
@@ -289,6 +290,7 @@ footer span {
           align-items: center;
   -webkit-transition: .3s;
   transition: .3s;
+  cursor: default;
 }
 
 .hero:hover .hero-top {
@@ -446,7 +448,7 @@ button.esp, button.eng {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   opacity: 0;
-  cursor: url("../images/cursor.svg"), auto;
+  cursor: pointer;
   color: #262e38;
 }
 
@@ -547,5 +549,30 @@ button.esp, button.eng {
 .menuMain-txt {
   opacity: 0;
   font-weight: 900;
+}
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  z-index: 5;
+  display: none;
+}
+
+.night .modal-wrap {
+  background: #262e38;
+}
+
+.modal-wrap.open {
+  display: block;
+}
+
+.modal-back {
+  background: none;
+  border: none;
+  font-weight: 700;
 }
 /*# sourceMappingURL=styles.css.map */

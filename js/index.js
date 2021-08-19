@@ -20,31 +20,41 @@ btnNight.addEventListener('click', function(){
 var btnTrans = document.getElementById('translateBtn');
 
 
+function idiomaClick(){
+    var idiomaSet = localStorage.getItem('idioma');
+    if(idiomaSet === 'esp'){
+        btnTrans.innerHTML = "Eng";
+    }
+    if(idiomaSet === 'eng'){
+        btnTrans.innerHTML = "Esp";
+    }
+}
+
+
 function idiomaCambio(){
     var idiomaSet = localStorage.getItem('idioma');
     if(localStorage.getItem('idioma') === null){
         console.log(' idiomaSet esta vacio');
-        localStorage.setItem('idioma', 'eng');
     }
     if(idiomaSet === 'esp'){
         body.classList.add('esp');
         localStorage.setItem('idioma', 'eng');
-        console.log(idiomaSet);
-        btnTrans.innerHTML = "Eng";
+
     }
     if(idiomaSet === 'eng'){
         body.classList.remove('esp'); 
         localStorage.setItem('idioma', 'esp');
-        console.log(idiomaSet);
-        btnTrans.innerHTML = "Esp";
+        
     }
 }
 
 btnTrans.addEventListener('click', function(){
     idiomaCambio();  
+    idiomaClick();
+
 });
 
-idiomaCambio();  
+
 
 
 // ================= intersection observer =========
@@ -66,3 +76,35 @@ menuBtn.forEach(menuBtn =>{
 
 
 // observer.observe(element) 
+
+//  ========= modal btn =======
+
+var btnWorks = document.getElementById("btnWorks");
+var wrapWorks = document.getElementById("wrapWorks");
+var modalBack = document.querySelectorAll(".modal-back");
+var modalWrap = document.querySelectorAll(".modal-wrap");
+
+
+btnWorks.addEventListener('click', function(){
+    console.log('click al boton de works');
+    wrapWorks.classList.add('open');
+})
+
+function removeOpen(){
+
+    for (w = 0; w < modalWrap.length; ++w){
+        modalWrap[w].classList.remove('open');
+    }
+}
+
+
+for (i = 0; i < modalBack.length; ++i) {
+
+    modalBack[i].addEventListener('click', function(){
+        
+        removeOpen()
+
+    });
+    
+}
+

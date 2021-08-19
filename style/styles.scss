@@ -12,6 +12,7 @@ html, body{
     font-family: $roboto;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 body{
     transition: .3s ease-in-out;
@@ -156,3 +157,4 @@ footer{
 @import "./hero.scss";
 @import "./elements.scss";
 @import "./menu.scss";
+@import "./modal.scss"

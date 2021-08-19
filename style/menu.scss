@@ -17,7 +17,7 @@
         transition: .3s ease-in-out;
         opacity: 0;
         // margin: auto;
-        cursor: url('../images/cursor.svg'), auto;
+        cursor: pointer;
         color: $black;
         &:hover{
             background: $magenta;
