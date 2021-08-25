@@ -21,11 +21,16 @@ var btnTrans = document.getElementById('translateBtn');
 
 
 function idiomaClick(){
+    console.log('le estoy dando click');
     var idiomaSet = localStorage.getItem('idioma');
     if(idiomaSet === 'esp'){
-        btnTrans.innerHTML = "Eng";
+        btnTrans.innerHTML = "Esp";
     }
     if(idiomaSet === 'eng'){
+        btnTrans.innerHTML = "Eng";
+    }
+    if(idiomaSet == null){
+        localStorage.setItem('idioma', 'esp');
         btnTrans.innerHTML = "Esp";
     }
 }
@@ -33,19 +38,33 @@ function idiomaClick(){
 
 function idiomaCambio(){
     var idiomaSet = localStorage.getItem('idioma');
-    if(localStorage.getItem('idioma') === null){
-        console.log(' idiomaSet esta vacio');
-    }
     if(idiomaSet === 'esp'){
-        body.classList.add('esp');
+        body.classList.remove('esp');
         localStorage.setItem('idioma', 'eng');
 
     }
     if(idiomaSet === 'eng'){
-        body.classList.remove('esp'); 
-        localStorage.setItem('idioma', 'esp');
-        
+        body.classList.add('esp'); 
+        localStorage.setItem('idioma', 'esp');    
     }
+}
+
+window.onload = function(){
+    var idiomaSet = localStorage.getItem('idioma');
+    
+    if(idiomaSet === 'esp'){
+        console.log('el local storage esta en español')
+        body.classList.add('esp');
+    }
+    if(idiomaSet === 'eng'){
+        console.log('el local storage esta en ingles')
+        body.classList.remove('esp'); 
+    }
+    if(idiomaSet == null){
+        console.log('el local storege debe estar vacio');
+        localStorage.setItem('idioma', 'eng')
+    }
+    
 }
 
 btnTrans.addEventListener('click', function(){
@@ -81,13 +100,17 @@ menuBtn.forEach(menuBtn =>{
 
 var btnWorks = document.getElementById("btnWorks");
 var wrapWorks = document.getElementById("wrapWorks");
-var modalBack = document.querySelectorAll(".modal-back");
+// var modalBack = document.querySelectorAll(".modal-back");
+var modalBack = document.querySelectorAll(".btn-back");
+
 var modalWrap = document.querySelectorAll(".modal-wrap");
+var headerWrap = document.querySelector('.header-wrap');
 
 
 btnWorks.addEventListener('click', function(){
     console.log('click al boton de works');
     wrapWorks.classList.add('open');
+    headerWrap.classList.add('open')
 })
 
 function removeOpen(){
@@ -95,6 +118,7 @@ function removeOpen(){
     for (w = 0; w < modalWrap.length; ++w){
         modalWrap[w].classList.remove('open');
     }
+    headerWrap.classList.remove('open');
 }
 
 

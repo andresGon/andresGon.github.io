@@ -78,6 +78,7 @@ header{
     background: #fff;
     transition: .3s;
     border:none;
+    z-index: 7;
     @include night{
         background: $black;
     }
@@ -95,7 +96,22 @@ header{
         width: 100%;
         max-width: 1080px;
         padding: 21px 0;
+        .folio{
+            &-back{
+                display: none;
+            }
+        }
+        &.open{
+            .btn-back{
+                display: flex;
+            }
+            .folio{
+                display: none;
+            }
+        }
     }
+
+    
 }
 // ============== footer =================
 
@@ -153,6 +169,7 @@ footer{
         display: block;
     }
 }
+
 
 @import "./hero.scss";
 @import "./elements.scss";

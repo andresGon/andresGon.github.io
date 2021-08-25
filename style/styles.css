@@ -132,6 +132,7 @@ header {
   -webkit-transition: .3s;
   transition: .3s;
   border: none;
+  z-index: 7;
 }
 
 .night header {
@@ -157,6 +158,20 @@ header {
   width: 100%;
   max-width: 1080px;
   padding: 21px 0;
+}
+
+.header-wrap .folio-back {
+  display: none;
+}
+
+.header-wrap.open .btn-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-wrap.open .folio {
+  display: none;
 }
 
 footer {
@@ -403,15 +418,40 @@ button.esp, button.eng {
   color: #fff;
 }
 
+.btn-back {
+  display: none;
+  background: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-back .icon-back {
+  margin-right: 7px;
+}
+
+.night .btn-back {
+  color: #fff;
+}
+
 .folio {
   font-weight: 700;
   margin: 0;
   text-decoration: none;
   color: #262e38;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  border: none;
 }
 
 .night .folio {
   color: #fff;
+}
+
+.folio .icon-back {
+  margin: 0 7px 0 0;
 }
 
 .menuMain {
@@ -553,7 +593,7 @@ button.esp, button.eng {
 
 .modal-wrap {
   position: fixed;
-  top: 0;
+  top: 60px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -570,9 +610,50 @@ button.esp, button.eng {
   display: block;
 }
 
+.modal-inner {
+  max-width: 1080px;
+  margin: 60px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .modal-back {
   background: none;
   border: none;
   font-weight: 700;
+}
+
+.modal-tit {
+  font-size: 80px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.night .modal-tit {
+  color: #fff;
+}
+
+.modal-txt {
+  margin: 0;
+}
+
+.night .modal-txt {
+  color: #fff;
+}
+
+.modal-colWorks:nth-child(1) {
+  width: 40%;
+}
+
+.modal-colWorks:nth-child(2) {
+  width: 60%;
+}
+
+.works-wrapImg {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: red;
 }
 /*# sourceMappingURL=styles.css.map */

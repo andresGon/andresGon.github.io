@@ -36,14 +36,32 @@ button.esp, button.eng{
             color: #fff;
         }
     }
+    &-back{
+        display: none;
+        background: none;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        .icon-back{
+            margin-right: 7px;
+        }
+        @include night{
+            color: #fff;
+        }
+    }
 }
 .folio{
     font-weight: 700;
     margin: 0; 
     text-decoration: none;
     color: $black;
+    display: flex;
+    background: none;
+    border: none;
     @include night{
         color: #fff;
     }
+    .icon-back{
+        margin: 0 7px 0 0;
+    }
 }
-

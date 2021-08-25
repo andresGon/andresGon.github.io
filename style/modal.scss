@@ -1,7 +1,7 @@
 .modal{
     &-wrap{
         position: fixed;
-        top: 0;
+        top: 60px;
         bottom: 0;
         right: 0;
         left: 0;
@@ -15,9 +15,54 @@
             display: block;
         }
     }
+    &-inner{
+        max-width: 1080px;
+        margin: 60px auto 0;
+        display: flex;
+    }
     &-back{
         background: none;
         border: none;
         font-weight: 700;
+    }
+    &-tit{
+        font-size: 80px;
+        font-weight: 900;
+        margin: 0;
+        @include night{
+            color: #fff;
+        }
+    }
+    &-txt{
+        margin: 0;
+        @include night{
+            color: #fff;
+        }
+    }
+    &-colWorks{
+        &:nth-child(1){
+            width: 40%;
+        }
+        &:nth-child(2){
+            width: 60%;
+        }
+    }
+}
+
+
+// ============= estilos para modal works ==========
+
+.works{
+    &-wrap{
+
+    }
+    &-col{
+        
+    }
+    &-wrapImg{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        background: red;
     }
 }
