@@ -100,21 +100,30 @@ menuBtn.forEach(menuBtn =>{
 
 var btnWorks = document.getElementById("btnWorks");
 var wrapWorks = document.getElementById("wrapWorks");
-// var modalBack = document.querySelectorAll(".modal-back");
-var modalBack = document.querySelectorAll(".btn-back");
 
+var wrapSkills = document.getElementById("wrapSkills");
+var btnSkills = document.getElementById("btnSkills");
+
+
+var wrapAbout = document.getElementById("wrapAbout");
+var btnAbout = document.getElementById("btnAbout");
+
+
+var wrapTalk = document.getElementById("wrapTalk");
+var btnTalk = document.getElementById("btnTalk");
+
+
+var modalBack = document.querySelectorAll(".btn-back");
 var modalWrap = document.querySelectorAll(".modal-wrap");
 var headerWrap = document.querySelector('.header-wrap');
 
 
-btnWorks.addEventListener('click', function(){
-    console.log('click al boton de works');
-    wrapWorks.classList.add('open');
-    headerWrap.classList.add('open')
-})
+function addOpen(seccion){
+    seccion.classList.add('open');
+    headerWrap.classList.add('open');
+}
 
 function removeOpen(){
-
     for (w = 0; w < modalWrap.length; ++w){
         modalWrap[w].classList.remove('open');
     }
@@ -123,12 +132,25 @@ function removeOpen(){
 
 
 for (i = 0; i < modalBack.length; ++i) {
-
     modalBack[i].addEventListener('click', function(){
-        
         removeOpen()
-
     });
-    
 }
 
+
+btnWorks.addEventListener('click', function(){
+    addOpen(wrapWorks);
+});
+
+btnSkills.addEventListener('click', function(){
+    addOpen(wrapSkills);
+});
+
+
+btnAbout.addEventListener('click', function(){
+    addOpen(wrapAbout);
+});
+
+btnTalk.addEventListener('click', function(){
+    addOpen(wrapTalk);
+});

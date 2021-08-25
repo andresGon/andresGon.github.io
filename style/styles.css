@@ -604,8 +604,8 @@ button.esp, button.eng {
           animation-duration: .3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-name: fadeInRightBig;
-          animation-name: fadeInRightBig;
+  -webkit-animation-name: fadeOutRight;
+          animation-name: fadeOutRight;
 }
 
 .night .modal-wrap {
@@ -614,6 +614,8 @@ button.esp, button.eng {
 
 .modal-wrap.open {
   display: block;
+  -webkit-animation-name: fadeInRightBig;
+          animation-name: fadeInRightBig;
 }
 
 .modal-inner {
@@ -805,5 +807,32 @@ button.esp, button.eng {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+}
+
+@-webkit-keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+}
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+          animation-name: fadeOutRight;
 }
 /*# sourceMappingURL=styles.css.map */
