@@ -454,6 +454,12 @@ button.esp, button.eng {
   margin: 0 7px 0 0;
 }
 
+.skillsIcons {
+  color: #FF1F5B;
+  font-size: 19px;
+  margin-right: 7px;
+}
+
 .menuMain {
   min-height: calc(100vh - 86px);
   display: -webkit-box;
@@ -624,6 +630,9 @@ button.esp, button.eng {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal-back {
@@ -652,10 +661,36 @@ button.esp, button.eng {
 
 .modal-colWorks:nth-child(1) {
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
 .modal-colWorks:nth-child(2) {
   width: 60%;
+}
+
+.modal-colWorks:nth-child(2).modal-colWorks--skills {
+  width: 50%;
+}
+
+.modal-colWorks--skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
 }
 
 .works-wrap {
@@ -769,6 +804,12 @@ button.esp, button.eng {
 .works-tit {
   margin: 0;
   font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .night .works-tit {

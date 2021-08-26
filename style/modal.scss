@@ -23,6 +23,7 @@
         max-width: 1080px;
         margin: 60px auto 0;
         display: flex;
+        justify-content: space-between;
     }
     &-back{
         background: none;
@@ -46,9 +47,22 @@
     &-colWorks{
         &:nth-child(1){
             width: 40%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-flow: column;
         }
         &:nth-child(2){
             width: 60%;
+            &.modal-colWorks--skills{
+                width: 50%;
+            }
+        }
+        &--skills{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            
         }
     }
 }
@@ -129,6 +143,8 @@
     &-tit{
         margin: 0;
         font-size: 24px;
+        display: flex;
+        align-items: center;
         @include night{
             color: #fff;
         }
