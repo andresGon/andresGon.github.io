@@ -8,9 +8,9 @@
         background: #fff;
         z-index: 5;
         display: none;
-        animation-duration: .3s;
-        animation-fill-mode: both;
-        animation-name: fadeOutRight;
+        // animation-duration: .3s;
+        // animation-fill-mode: both;
+        // animation-name: fadeOutRight;
         @include night{
             background: $black;
         }
@@ -184,3 +184,31 @@
   .fadeOutRight {
     animation-name: fadeOutRight;
   }
+
+//   ======== estilos para modal about me ========
+
+.about{
+    &-wrap{
+        width: 100%;
+        height: 100%;
+    }
+    &-row{
+        .modal-tit{
+            text-align: center;
+        }
+    }
+    &-wrapLine{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-col{
+        width: 230px;
+    }
+    &-date{
+        color: #fff;
+        font-weight: 700;
+        background: $magenta;
+        padding: 3px 7px;
+        display: inline-block;
+    }
+}
