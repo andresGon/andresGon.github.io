@@ -606,6 +606,12 @@ button.esp, button.eng {
   background: #fff;
   z-index: 5;
   display: none;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeOutRight;
+          animation-name: fadeOutRight;
 }
 
 .night .modal-wrap {
@@ -685,6 +691,63 @@ button.esp, button.eng {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
+}
+
+.modal-colWorks form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.modal-colWorks input, .modal-colWorks textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000;
+  margin: 10px 0  20px 0;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+}
+
+.night .modal-colWorks input, .night .modal-colWorks textarea {
+  background: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.modal-colWorks input:focus, .modal-colWorks textarea:focus {
+  border-bottom: 1px solid #FF1F5B;
+}
+
+.modal-colWorks textarea {
+  height: 50px;
+}
+
+.modal-colWorks input[type=submit] {
+  border-bottom: none;
+  background: #FF1F5B;
+  cursor: pointer;
+  height: 47px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.night .modal-colWorks input[type=submit] {
+  color: #fff;
+}
+
+.modal-colWorks label {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.night .modal-colWorks label {
+  color: #fff;
 }
 
 .works-wrap {
@@ -878,6 +941,10 @@ button.esp, button.eng {
 
 .about-row .modal-tit {
   text-align: center;
+}
+
+.about-row:nth-child(1) {
+  margin-bottom: 15vh;
 }
 
 .about-wrapLine {

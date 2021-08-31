@@ -8,9 +8,9 @@
         background: #fff;
         z-index: 5;
         display: none;
-        // animation-duration: .3s;
-        // animation-fill-mode: both;
-        // animation-name: fadeOutRight;
+        animation-duration: .3s;
+        animation-fill-mode: both;
+        animation-name: fadeOutRight;
         @include night{
             background: $black;
         }
@@ -63,6 +63,50 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             
+        }
+        form{
+            display: flex;
+            flex-flow: column;
+        }
+        input, textarea{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #000;
+            margin: 10px 0  20px 0;
+            outline: none;
+            resize: none;
+            font-size: 14px;
+
+            @include night{
+                background: none;
+                color: #fff;
+                border-bottom: 1px solid #fff;
+            }
+            &:focus{
+                border-bottom: 1px solid $magenta;
+            }
+        }
+        textarea{
+            height: 50px;
+        }
+        input[type=submit]{
+            border-bottom: none;
+            background: $magenta;
+            cursor: pointer;
+            height: 47px;
+            font-weight: 700;
+            font-size: 18px;
+            @include night{
+                color: #fff;
+            }
+        }
+        label{
+            font-weight: 700;
+            font-size: 18px;
+            @include night{
+                color: #fff;
+            }
         }
     }
 }
@@ -195,6 +239,9 @@
     &-row{
         .modal-tit{
             text-align: center;
+        }
+        &:nth-child(1){
+            margin-bottom: 15vh;
         }
     }
     &-wrapLine{
