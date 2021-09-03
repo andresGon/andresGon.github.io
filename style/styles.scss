@@ -31,7 +31,28 @@ body.night{
         @content;
     }
 }
+@mixin lg {
+    @media (max-width: 1090px) {
+        @content;
+    }
+  
+}
 
+@mixin media ($ancho) {
+    @media (max-width: $ancho) {
+      @content;
+    }
+  }
+  @mixin mediaAlto ($alto) {
+    @media (max-height: $alto) {
+      @content;
+    }
+  }
+  @mixin mediaMin ($ancho2) {
+    @media (min-width: $ancho2) {
+      @content;
+    }
+  }
 
 // ================ main ===============
 
@@ -96,6 +117,9 @@ header{
         width: 100%;
         max-width: 1080px;
         padding: 21px 0;
+        @include lg{
+            width: 90%;
+        }
         .folio{
             &-back{
                 display: none;

@@ -21,9 +21,12 @@
     }
     &-inner{
         max-width: 1080px;
-        margin: 60px auto 0;
+        margin: 10vw auto 0;
         display: flex;
         justify-content: space-between;
+        @include lg{
+            width: 90%;
+        }
     }
     &-back{
         background: none;
@@ -36,6 +39,9 @@
         margin: 0;
         @include night{
             color: #fff;
+        }
+        @include lg{
+            font-size: 7.4vw;
         }
     }
     &-txt{
@@ -53,7 +59,7 @@
             flex-flow: column;
         }
         &:nth-child(2){
-            width: 60%;
+            width: 55%;
             &.modal-colWorks--skills{
                 width: 50%;
             }
@@ -172,7 +178,7 @@
         align-items: center;
         justify-content: center;
     }
-    &-overInner{
+    &-overInner{    
         display: flex;
         font-weight: 900;
         font-size: 14px;
@@ -237,11 +243,13 @@
         height: 100%;
     }
     &-row{
-        .modal-tit{
-            text-align: center;
+        .works-txt{
+            max-width: 300px;
+            margin: auto;
         }
         &:nth-child(1){
             margin-bottom: 15vh;
+            text-align: center;
         }
     }
     &-wrapLine{
