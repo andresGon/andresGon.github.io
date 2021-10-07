@@ -178,7 +178,7 @@ footer{
     align-items: center;
     justify-content: center;
     height: 64px;
-    margin: 0
+    margin: 0;
 }
 
 .txtEng{
@@ -194,7 +194,18 @@ footer{
     }
 }
 
-
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: $black;
+    @include night{
+        background: #fff
+    }
+}
+.night::-webkit-scrollbar-thumb{
+    background: #fff;
+}
 @import "./hero.scss";
 @import "./elements.scss";
 @import "./menu.scss";

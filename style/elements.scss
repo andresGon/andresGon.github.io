@@ -28,9 +28,14 @@ button.esp, button.eng{
         justify-items: center;
         align-items: center;
         transform: rotate(-90deg);
+        cursor: pointer;
+        transition: .3s;
         span{
             font-weight: 900;
             padding: 0 0 0 7px;
+        }
+        &:hover{
+            color: $magenta;
         }
         @include night{
             color: #fff;

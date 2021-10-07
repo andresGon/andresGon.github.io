@@ -154,3 +154,13 @@ btnAbout.addEventListener('click', function(){
 btnTalk.addEventListener('click', function(){
     addOpen(wrapTalk);
 });
+
+const btnScroll = document.querySelector(".btn-scrollDown");
+const scrollTo = document.querySelector(".menuMain");
+// const btnScroll1 = btnScroll[0];
+
+btnScroll.addEventListener('click', function(){
+    // console.log('click en el scrool');
+    scrollTo.scrollIntoView({behavior:"smooth"});
+})
+
