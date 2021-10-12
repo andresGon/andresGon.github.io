@@ -424,25 +424,36 @@
                 </div>
             </div>
             <div class="modal-colWorks">
-                <form action="">
+                <form 
+                action="https://formspree.io/f/xnqlreab"
+                method="POST"
+                id="form"
+                >
                     <label for="">
                         <span class="txtEng">Your name</span>
                         <span class="txtEsp">Tu nombre</span>
-                        
                     </label>
                     <input type="text" required>
                     <label for="">
                         <span class="txtEng">Your email</span>
                         <span class="txtEsp">Tu email</span>
                     </label>
-                    <input type="email" required>
+                    <input type="email"  name="_replyto" required>
                     <label for="">
                         <span class="txtEng">Your mesages</span>
                         <span class="txtEsp">Tu mensaje</span>
                     </label>
-                    <textarea required></textarea>
-                    <input type="submit" value="Enviar">
+                    <textarea name="message" required></textarea>
+                    <button type="submit">
+                        <span class="txtEng">Send</span>
+                        <span class="txtEsp">Enviar</span>
+                        
+                    </button>
                 </form>
+                <p class="modal__tks">
+                    <span class="txtEng">Thanks for your message, I'll call you soon!</span>
+                    <span class="txtEsp">Gracias por tu mensaje, pronto te llamare!</span>
+                </p>
             </div>
             
         </div>

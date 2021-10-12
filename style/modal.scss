@@ -107,7 +107,7 @@
             outline: none;
             resize: none;
             font-size: 14px;
-
+            font-family: $roboto;
             @include night{
                 background: none;
                 color: #fff;
@@ -119,9 +119,11 @@
         }
         textarea{
             height: 50px;
+            font-size: 14px;
+            font-family: $roboto;
         }
-        input[type=submit]{
-            border-bottom: none;
+        button[type=submit]{
+            border: none;
             background: $magenta;
             cursor: pointer;
             height: 47px;
@@ -137,6 +139,15 @@
             @include night{
                 color: #fff;
             }
+        }
+    }
+    &__tks{
+        font-size: 18px;
+        font-weight: 700;
+        color: $magenta;
+        visibility: hidden;
+        &.open{
+            visibility: visible;
         }
     }
 }

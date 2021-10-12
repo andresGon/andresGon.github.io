@@ -838,6 +838,7 @@ button.esp, button.eng {
   outline: none;
   resize: none;
   font-size: 14px;
+  font-family: "Roboto", sans-serif;
 }
 
 .night .modal-colWorks input, .night .modal-colWorks textarea {
@@ -852,10 +853,12 @@ button.esp, button.eng {
 
 .modal-colWorks textarea {
   height: 50px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
 }
 
-.modal-colWorks input[type=submit] {
-  border-bottom: none;
+.modal-colWorks button[type=submit] {
+  border: none;
   background: #FF1F5B;
   cursor: pointer;
   height: 47px;
@@ -863,7 +866,7 @@ button.esp, button.eng {
   font-size: 18px;
 }
 
-.night .modal-colWorks input[type=submit] {
+.night .modal-colWorks button[type=submit] {
   color: #fff;
 }
 
@@ -874,6 +877,17 @@ button.esp, button.eng {
 
 .night .modal-colWorks label {
   color: #fff;
+}
+
+.modal__tks {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF1F5B;
+  visibility: hidden;
+}
+
+.modal__tks.open {
+  visibility: visible;
 }
 
 .works-wrap {
