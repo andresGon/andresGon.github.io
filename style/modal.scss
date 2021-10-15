@@ -40,6 +40,17 @@
                 }
             }
         }
+        &--skills{
+            @include media(767px){
+                flex-flow: column;
+                
+            }
+            .modal-colWorks{
+                &:nth-child(1){
+                    width: 40%;
+                }
+            }
+        }
     }
     &-back{
         background: none;
@@ -56,6 +67,14 @@
         }
         @include lg{
             font-size: 7.4vw;
+        }
+        &--proy{
+            @include lg{
+                font-size: 6.4vw;
+            }
+            @include media(980px){
+                font-size: 7.4vw;
+            }
         }
     }
     &-txt{
@@ -84,6 +103,9 @@
             @include media(980px){
                 width:660px;
             }
+            @include media(640px){
+                width: 100%;
+            }
             &.modal-colWorks--skills{
                 width: 50%;
             }
@@ -92,6 +114,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
+            gap: 27px;
             
         }
         form{
@@ -161,8 +184,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows:repeat(2, 1fr);
         @include media(640px){
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 1fr;
             grid-template-rows:repeat(3, 1fr); 
+            max-height: calc(100vh - 215px);
+            overflow: scroll;
         }
     }
     &-col{
@@ -176,8 +201,12 @@
         &:nth-child(2){
             grid-column: 2/3;
             grid-row: 1/2;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
             @include media(640px){
-                grid-row: 1/2;
+                grid-column: 1/2;
+                grid-row: 2/3;
             }
         }
         &:nth-child(3){
@@ -186,6 +215,10 @@
             display: flex;
             flex-flow: column;
             justify-content: flex-end;
+            @include media(640px){
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
         }
     }
     &-wrapImg{
@@ -195,7 +228,7 @@
         cursor: pointer;
         overflow: hidden;
         margin: 14px 0 0 0;
-        
+        color: #000;
         &:hover{
             .works-overImg{
                 height: 100%;
@@ -207,7 +240,9 @@
         &--01{
             width: 268px;
             height: 428px;
-            
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
         }
     }
     &-overImg{
@@ -296,7 +331,7 @@
             margin: auto;
         }
         &:nth-child(1){
-            margin-bottom: 15vh;
+            margin-bottom: 10vh;
             text-align: center;
         }
     }

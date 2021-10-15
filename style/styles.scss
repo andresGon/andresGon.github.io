@@ -147,7 +147,7 @@ footer{
     gap: 7px;
     margin-bottom: 21px;
     a{
-        margin: 0 7px;
+        // margin: 0 7px;
         color: $black;
         text-decoration: none;
         cursor: pointer;
@@ -168,7 +168,12 @@ footer{
     }
 }
 .footer{
-
+    &-social{
+        width: 107px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 // ============== scroll down =============
@@ -206,7 +211,7 @@ footer{
 .night::-webkit-scrollbar-thumb{
     background: #fff;
 }
-@import "./hero.scss";
+@import "./hero.scss";  
 @import "./elements.scss";
 @import "./menu.scss";
 @import "./modal.scss"; 
