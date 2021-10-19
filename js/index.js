@@ -116,6 +116,7 @@ var btnTalk = document.getElementById("btnTalk");
 var modalBack = document.querySelectorAll(".btn-back");
 var modalWrap = document.querySelectorAll(".modal-wrap");
 var headerWrap = document.querySelector('.header-wrap');
+var mailFoot = document.getElementById('mailFoot');
 
 
 function addOpen(seccion){
@@ -155,6 +156,11 @@ btnAbout.addEventListener('click', function(){
 
 btnTalk.addEventListener('click', function(){
     addOpen(wrapTalk);
+});
+
+mailFoot.addEventListener('click', function(evt){
+    addOpen(wrapTalk);
+    evt.preventDefault();
 });
 
 const btnScroll = document.querySelector(".btn-scrollDown");
