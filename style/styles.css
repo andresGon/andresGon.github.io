@@ -73,11 +73,6 @@ html, body {
   position: relative;
 }
 
-body {
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
 body.night {
   background: #262e38;
 }
@@ -129,8 +124,6 @@ header {
           justify-content: center;
   position: fixed;
   background: #fff;
-  -webkit-transition: .3s;
-  transition: .3s;
   border: none;
   z-index: 7;
 }
@@ -566,6 +559,12 @@ button.esp, button.eng {
   }
 }
 
+@media (max-width: 550px) {
+  .menuMain-row {
+    padding: 2vh 0;
+  }
+}
+
 .menuMain-row:hover {
   background: #FF1F5B;
   -webkit-transform: scale(1.05);
@@ -710,6 +709,12 @@ button.esp, button.eng {
           animation-name: fadeInRightBig;
 }
 
+@media (max-width: 640px) {
+  .modal-wrap--works {
+    overflow: scroll;
+  }
+}
+
 .modal-inner {
   max-width: 1080px;
   margin: 10vw auto 0;
@@ -754,12 +759,17 @@ button.esp, button.eng {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    width: 100%;
   }
 }
 
 .modal-inner--skills .modal-colWorks:nth-child(1) {
   width: 40%;
+}
+
+@media (max-width: 767px) {
+  .modal-inner--skills .modal-colWorks:nth-child(1) {
+    width: 100%;
+  }
 }
 
 .modal-back {
@@ -852,6 +862,19 @@ button.esp, button.eng {
 
 .modal-colWorks:nth-child(2).modal-colWorks--skills {
   width: 50%;
+}
+
+@media (max-width: 767px) {
+  .modal-colWorks:nth-child(2).modal-colWorks--skills {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .modal-colWorks:nth-child(2).modal-colWorks--skills {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .modal-colWorks--skills {
@@ -951,7 +974,6 @@ button.esp, button.eng {
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
     max-height: calc(100vh - 215px);
-    overflow: scroll;
   }
 }
 
@@ -1197,6 +1219,12 @@ button.esp, button.eng {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .about-row:nth-child(1) {
+    margin-bottom: 4vh;
+  }
+}
+
 .about-wrapLine {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1206,8 +1234,23 @@ button.esp, button.eng {
           justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+  .about-wrapLine {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
 .about-col {
   width: 230px;
+}
+
+@media (max-width: 767px) {
+  .about-col {
+    margin-top: 21px;
+  }
 }
 
 .about-date {

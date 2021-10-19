@@ -21,6 +21,10 @@
         color: $black;
         @include lg{
             width: 90%;
+            
+        }
+        @include media(550px){
+            padding: 2vh 0;
         }
         &:hover{
             background: $magenta;
