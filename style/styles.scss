@@ -20,6 +20,9 @@ body{
 body.night{
     background: $black;
 }
+body.block{
+    overflow: hidden;
+}
 // ================ mixins ===============
 @mixin night {
     .night & {

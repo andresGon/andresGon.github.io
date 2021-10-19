@@ -77,6 +77,10 @@ body.night {
   background: #262e38;
 }
 
+body.block {
+  overflow: hidden;
+}
+
 .main-main {
   min-height: 100vh;
   -webkit-transition: .3s;

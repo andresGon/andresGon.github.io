@@ -121,6 +121,7 @@ var headerWrap = document.querySelector('.header-wrap');
 function addOpen(seccion){
     seccion.classList.add('open');
     headerWrap.classList.add('open');
+    body.classList.add('block');
 }
 
 function removeOpen(){
@@ -128,6 +129,7 @@ function removeOpen(){
         modalWrap[w].classList.remove('open');
     }
     headerWrap.classList.remove('open');
+    body.classList.remove('block');
 }
 
 
